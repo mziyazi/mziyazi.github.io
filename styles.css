@@ -1,0 +1,31 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for sections */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for the image */
+img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    display: block; /* Ensures proper spacing around the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Example: Positioning the image within a specific section */
+#home {
+    text-align: center; /* Center-align text and image within the section */
+}
+
+/* Adjusting image size */
+img {
+    width: 50%; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional styles can be added as needed */
