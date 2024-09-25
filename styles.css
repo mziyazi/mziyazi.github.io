@@ -63,6 +63,13 @@ h1, h2, h3 {
     padding: 100px 0;
     background-color: #f4f4f4;
 }
+/* Add rounded corners to images */
+img {
+    border-radius: 5px;
+}
+
+
+
 
 .profile-image {
     width: 200px;
@@ -70,6 +77,7 @@ h1, h2, h3 {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+    background-color: lightblue; /* Added background color */
 }
 
 /* Projects Section */
@@ -99,7 +107,7 @@ h1, h2, h3 {
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+social-links a:hover {
     color: #007bff;
 }
 
