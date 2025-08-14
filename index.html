@@ -3,50 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahdi Najafi‑Ziyazi</title>
-  <meta name="description" content="Mahdi Najafi‑Ziyazi — PhD researcher in computational astrophysics (CmPA, KU Leuven)." />
+  <title>Mahdi Najafi-Ziyazi</title>
+  <meta name="description" content="Mahdi Najafi-Ziyazi — PhD researcher in computational astrophysics (CmPA, KU Leuven)." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#f7faff;--card:#ffffff;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--brand:#2563eb;--brand-weak:#93c5fd;--shadow:0 8px 24px rgba(2,6,23,.06);--radius:16px;--maxw:1024px}
+    :root{
+      --bg:#f7faff; --card:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0;
+      --brand:#2563eb; --brand-weak:#93c5fd; --shadow:0 8px 24px rgba(2,6,23,.06);
+      --radius:16px; --maxw:1024px;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:var(--bg);line-height:1.6;letter-spacing:.1px}
-    a{color:var(--brand);text-decoration:none}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--ink); background:var(--bg); line-height:1.6; letter-spacing:.1px;
+    }
+    a{color:var(--brand); text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(8px);background:rgba(247,250,255,.7);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:56px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--brand)}
-    nav ul{display:flex;gap:20px;list-style:none;padding:0;margin:0}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+    /* Header / Nav */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(247,250,255,.7); border-bottom:1px solid var(--line)}
+    .nav{display:flex; align-items:center; justify-content:space-between; height:56px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .brand .dot{width:10px; height:10px; border-radius:999px; background:var(--brand)}
+    nav ul{display:flex; gap:20px; list-style:none; padding:0; margin:0}
     nav a{font-weight:500}
-    .hero{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:56px 0}
-    .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--brand-weak);box-shadow:var(--shadow)}
-    .title{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:0 0 8px}
-    .subtitle{color:var(--muted);margin:0}
-    section{padding:28px 0 8px;scroll-margin-top:72px}
-    h2{font-size:clamp(22px,3vw,28px);margin:12px 0 16px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
-    .grid{display:grid;gap:16px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:56px 0}
+    .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover;
+      border:3px solid var(--brand-weak); box-shadow:var(--shadow)}
+    .title{font-size:clamp(28px,4vw,40px); line-height:1.2; margin:0 0 8px}
+    .subtitle{color:var(--muted); margin:0}
+
+    /* Sections / Cards */
+    section{padding:28px 0 8px; scroll-margin-top:72px}
+    h2{font-size:clamp(22px,3vw,28px); margin:12px 0 16px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:20px}
+
+    /* Grid */
+    .grid{display:grid; gap:16px}
     .grid.cols-3{grid-template-columns:repeat(3,1fr)}
     @media(max-width:960px){.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){.grid.cols-3{grid-template-columns:1fr}.hero{grid-template-columns:80px 1fr}.avatar{width:80px;height:80px}}
-    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
-    .meta{color:var(--muted);font-size:14px}
-    .btn{display:inline-block;background:var(--brand);color:white;padding:10px 14px;border-radius:10px;font-weight:600;box-shadow:var(--shadow)}
-    .btn:hover{filter:brightness(0.95);text-decoration:none}
-    .badges{display:flex;gap:10px;flex-wrap:wrap}
-    .badge{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--brand-weak);color:#0b3b86;background:#eaf3ff;font-size:12px}
-    .list{display:grid;gap:12px}
-    .pub{display:grid;gap:4px}
-    .pub h3{margin:0;font-size:18px}
+    @media(max-width:640px){
+      .grid.cols-3{grid-template-columns:1fr}
+      .hero{grid-template-columns:80px 1fr}
+      .avatar{width:80px; height:80px}
+    }
+
+    /* Footer */
+    footer{border-top:1px solid var(--line); padding:24px 0; color:var(--muted); font-size:14px}
+
+    /* Small bits */
+    .meta{color:var(--muted); font-size:14px}
+    .btn{display:inline-block; background:var(--brand); color:#fff; padding:10px 14px;
+      border-radius:10px; font-weight:600; box-shadow:var(--shadow)}
+    .btn:hover{filter:brightness(0.95); text-decoration:none}
+    .badges{display:flex; gap:10px; flex-wrap:wrap}
+    .badge{display:inline-block; padding:4px 10px; border-radius:999px;
+      border:1px solid var(--brand-weak); color:#0b3b86; background:#eaf3ff; font-size:12px}
+    .list{display:grid; gap:12px}
+    .pub{display:grid; gap:4px}
+    .pub h3{margin:0; font-size:18px}
+
+    /* Projects section helpers */
+    .links{list-style:none; padding:0; margin:8px 0 0; display:grid; gap:8px}
+    .links li{display:flex; align-items:center; gap:10px}
+    .links svg{width:18px; height:18px; flex:none; color:var(--brand)}
+    .embed{position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden;
+           border-radius:12px; border:1px solid var(--line); box-shadow:var(--shadow); background:#000}
+    .embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+    .video-grid{display:grid; gap:12px}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <div class="brand"><span class="dot"></span> <span>Mahdi Najafi‑Ziyazi</span></div>
+      <div class="brand"><span class="dot"></span> <span>Mahdi Najafi-Ziyazi</span></div>
       <nav aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
@@ -57,13 +94,18 @@
       </nav>
     </div>
   </header>
+
   <main class="wrap">
+    <!-- About -->
     <section id="about">
       <div class="hero">
-        <img src="UC.jpeg" alt="Portrait of Mahdi Najafi‑Ziyazi" class="avatar" />
+        <img src="UC.jpeg" alt="Portrait of Mahdi Najafi-Ziyazi" class="avatar" />
         <div>
           <h1 class="title">Hi, I’m Mahdi — PhD researcher in computational astrophysics (CmPA, KU Leuven).</h1>
-          <p class="subtitle">I work on multi‑fluid models of the lower solar atmosphere under the supervision of Prof. Dr. Stefaan Poedts. This site is a minimal, fast portfolio with links to my work.</p>
+          <p class="subtitle">
+            I work on multi-fluid models of the lower solar atmosphere under the supervision of Prof. Dr. Stefaan Poedts.
+            This site is a minimal, fast portfolio with links to my work.
+          </p>
           <div class="badges" style="margin-top:14px">
             <span class="badge">Solar plasma</span>
             <span class="badge">MHD</span>
@@ -72,22 +114,48 @@
         </div>
       </div>
     </section>
+
+    <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid cols-3">
         <article class="card">
           <h3>Posters</h3>
           <p class="meta">NAC 2024 + earlier work</p>
-          <ul>
-            <li><a href="projects/poster/poster1.pdf" target="_blank">Poster 1</a></li>
-            <li><a href="projects/poster/poster2.pdf" target="_blank">Poster 2</a></li>
+          <ul class="links">
+            <li>
+              <!-- small inline file icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2 4 4h-4z"/></svg>
+              <a href="https://drive.google.com/file/d/1BwiqrcjqTrJ5ewc8dWBtBjKDqhJfS5ii/view" target="_blank" rel="noopener">Poster 1 (Google Drive)</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2 4 4h-4z"/></svg>
+              <a href="https://drive.google.com/file/d/1jkV1qofiSeLiLbfs7dPabLwcKSvFRLyT/view" target="_blank" rel="noopener">Poster 2 (Google Drive)</a>
+            </li>
           </ul>
         </article>
+
         <article class="card">
           <h3>Videos</h3>
           <p class="meta">Simulations from MSc/BSc projects</p>
-          <video src="projects/videos/simulation.mp4" controls style="width:100%;border-radius:8px"></video>
+          <div class="video-grid">
+            <div class="embed">
+              <iframe
+                src="https://www.youtube.com/embed/1bSSq_N9Ap8"
+                title="Simulation video 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="embed">
+              <iframe
+                src="https://www.youtube.com/embed/iFrTE4MfogM"
+                title="Simulation video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
         </article>
+
         <article class="card">
           <h3>GitHub</h3>
           <p class="meta">Selected code & experiments</p>
@@ -95,23 +163,25 @@
         </article>
       </div>
     </section>
+
+    <!-- Publications -->
     <section id="publications">
       <h2>Publications</h2>
       <div class="card">
         <div class="list">
           <div class="pub">
-            <h3>First Sagittarius A* Event Horizon Telescope Results. VIII.: Physical interpretation of the polarized ring</h3>
-            <div class="meta">The Event Horizon Telescope Collaboration — <em>Astrophysical Journal</em>, March 2024</div>
-            <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad2df1" target="_blank">DOI 10.3847/2041-8213/ad2df1</a>
+            <h3>First Sagittarius A* Event Horizon Telescope Results. VIII.: Physical interpretation of the polarized ring</h3>
+            <div class="meta">The Event Horizon Telescope Collaboration — <em>Astrophysical Journal</em>, March 2024</div>
           </div>
           <div class="pub">
-            <h3>Flares in the Galactic Centre II: polarisation signatures of flares at mm‑wavelengths</h3>
-            <div class="meta">Mahdi Najafi‑Ziyazi, Jordy Davelaar, Yosuke Mizuno, Oliver Porth — <em>MNRAS</em>, May 2024</div>
-            <a href="https://doi.org/10.1093/mnras/stae1343" target="_blank">DOI 10.1093/mnras/stae1343</a>
+            <h3>Flares in the Galactic Centre II: polarisation signatures of flares at mm-wavelengths</h3>
+            <div class="meta">Mahdi Najafi-Ziyazi, Jordy Davelaar, Yosuke Mizuno, Oliver Porth — <em>MNRAS</em>, May 2024</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Contact -->
     <section id="contact">
       <h2>Get in touch</h2>
       <div class="card">
@@ -120,8 +190,9 @@
       </div>
     </section>
   </main>
+
   <footer>
-    <div class="wrap">© <span id="y"></span> Mahdi Najafi‑Ziyazi · Leuven, Belgium</div>
+    <div class="wrap">© <span id="y"></span> Mahdi Najafi-Ziyazi · Leuven, Belgium</div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
