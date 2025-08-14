@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+---
+<main class="wrap">
+  <section>
+    <h2>Blog</h2>
+    <div class="card">
+      <ul class="list">
+        {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="meta">— {{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
+        {% else %}
+        <li class="meta">No posts yet.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</main>
