@@ -16,7 +16,7 @@ title: Home
           <span class="badge">MHD</span>
           <span class="badge">Numerical modelling</span>
         </div>
-        <p style="margin-top:12px">Email: <a href="mailto:mahdi@mziyazi.com">mahdi@mziyazi.com</a></p>
+        
       </div>
     </div>
   </section>
