@@ -16,6 +16,7 @@ title: Home
           <span class="badge">MHD</span>
           <span class="badge">Numerical modelling</span>
         </div>
+        <p style="margin-top:12px">Email: <a href="mailto:mahdi@mziyazi.com">mahdi@mziyazi.com</a></p>
       </div>
     </div>
   </section>
@@ -24,11 +25,4 @@ title: Home
 
   
 
-  <section id="contact">
-    <h2>Get in touch</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:mahdi@mziyazi.com">mahdi@mziyazi.com</a></p>
-      <p>Also find me on <a href="https://github.com/mziyazi" target="_blank" rel="noopener">GitHub</a>.</p>
-    </div>
-  </section>
 </main>
