@@ -1,0 +1,58 @@
+// Minimal lightbox for images and iframes
+(function(){
+  const lb = document.getElementById('lightbox');
+  if(!lb) return;
+  const content = lb.querySelector('.lb__content');
+
+  function openLightbox(node){
+    const type = node.getAttribute('data-lb-type') || 'iframe';
+    const src = node.getAttribute('data-lb-src') || node.getAttribute('href');
+    if(!src) return;
+
+    // Clear previous
+    content.innerHTML = '';
+
+    if(type === 'image'){
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = node.getAttribute('data-lb-alt') || '';
+      content.appendChild(img);
+    } else {
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      content.appendChild(iframe);
+    }
+
+    lb.classList.remove('hidden');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lb.classList.add('hidden');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    content.innerHTML = '';
+  }
+
+  // Delegated click handler
+  document.addEventListener('click', (e)=>{
+    const trigger = e.target.closest('[data-lightbox]');
+    if(trigger){
+      e.preventDefault();
+      openLightbox(trigger);
+      return;
+    }
+    if(e.target.closest('[data-lb-close]')){
+      closeLightbox();
+    }
+  });
+
+  // ESC to close
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && !lb.classList.contains('hidden')) closeLightbox();
+  });
+})();
+
