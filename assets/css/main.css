@@ -33,6 +33,12 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
 .list{display:grid;gap:12px}
 .pub{display:grid;gap:4px}
 .pub h3{margin:0;font-size:18px}
+.pub .badges{margin-top:4px}
+.pub .badge{background:#eef6ff;border-color:#cde0ff;color:#0b3b86}
+details.abstract{margin-top:6px}
+details.abstract > summary{cursor:pointer;color:var(--brand);font-weight:600}
+details.abstract[open] > summary{opacity:.9}
+h2.year{margin:16px 0 8px}
 /* Projects helpers */
 .links{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
 .links li{display:flex;align-items:center;gap:10px}

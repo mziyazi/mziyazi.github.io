@@ -22,29 +22,7 @@ title: Home
 
   
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="card">
-      <div class="list">
-        <div class="pub">
-          <h3>
-            <a href="#" onclick="return false;" title="Add DOI/URL here">
-              First Sagittarius A* Event Horizon Telescope Results. VIII.: Physical interpretation of the polarized ring
-            </a>
-          </h3>
-          <div class="meta">The Event Horizon Telescope Collaboration — <em>Astrophysical Journal</em>, March 2024</div>
-        </div>
-        <div class="pub">
-          <h3>
-            <a href="#" onclick="return false;" title="Add DOI/URL here">
-              Flares in the Galactic Centre II: polarisation signatures of flares at mm-wavelengths
-            </a>
-          </h3>
-          <div class="meta">Mahdi Najafi-Ziyazi, Jordy Davelaar, Yosuke Mizuno, Oliver Porth — <em>MNRAS</em>, May 2024</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <section id="contact">
     <h2>Get in touch</h2>

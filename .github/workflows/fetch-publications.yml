@@ -1,0 +1,39 @@
+name: Update publications from ADS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'  # Mondays at 03:17 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Fetch from ADS
+        env:
+          ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
+        run: |
+          python scripts/fetch_ads.py --author 'author:"Najafi-Ziyazi,Mahdi"'
+      - name: Commit and push if changed
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _data/publications.json
+            git commit -m "chore: update publications from ADS"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
