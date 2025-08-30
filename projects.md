@@ -22,11 +22,11 @@ permalink: /projects/
         <div class="video">
           <a class="thumb" data-lightbox data-lb-type="iframe"
              href="https://www.youtube.com/embed/1bSSq_N9Ap8?autoplay=1"
-             title="Master Project: Loopy Face of the Sgr A*">
-            <img src="https://img.youtube.com/vi/1bSSq_N9Ap8/hqdefault.jpg" alt="Master project video thumbnail" loading="lazy"/>
+             title="Master's Project: Loopy Face of the Sgr A*">
+            <img src="https://img.youtube.com/vi/1bSSq_N9Ap8/hqdefault.jpg" alt="Master's project video thumbnail" loading="lazy"/>
             <span class="play">Play</span>
           </a>
-          <h3>Master Project: Loopy Face of Sgr A*</h3>
+          <h3>Master's Project: Loopy Face of Sgr A*</h3>
           <p>
             The supermassive black hole at the center of the Milky Way, Sgr A*, displays a coherent periodic pattern in the linear polarisation plane. In this project, I show that the magnetically arrested disk (MAD) model of the black hole can produce similar loops at low inclinations.
           </p>
