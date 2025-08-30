@@ -39,6 +39,15 @@ details.abstract{margin-top:6px}
 details.abstract > summary{cursor:pointer;color:var(--brand);font-weight:600}
 details.abstract[open] > summary{opacity:.9}
 h2.year{margin:16px 0 8px}
+/* Author toggle */
+details.authors{display:inline}
+details.authors > summary{display:inline;list-style:none;cursor:pointer;color:var(--brand)}
+details.authors > summary::-webkit-details-marker{display:none}
+details.authors .toggle-show{margin-left:6px;color:var(--muted);font-size:12px}
+details.authors .toggle-hide{display:none;margin-left:6px;color:var(--muted);font-size:12px}
+details.authors[open] .toggle-show{display:none}
+details.authors[open] .toggle-hide{display:inline}
+details.authors .authors-full{display:block;margin-top:6px;color:var(--ink)}
 /* Projects helpers */
 .links{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
 .links li{display:flex;align-items:center;gap:10px}

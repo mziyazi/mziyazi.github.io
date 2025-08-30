@@ -24,7 +24,27 @@ permalink: /publications/
                 {% endif %}
               </h3>
               <div class="meta">
-                {% if p.authors %}{{ p.authors | join: ', ' }} — {% endif %}
+                {% if p.authors %}
+                  {% assign total_authors = p.authors | size %}
+                  {% capture authors_display %}
+                    {% for a in p.authors limit:15 %}
+                      {{ a }}{% if forloop.last == false %}, {% endif %}
+                    {% endfor %}
+                  {% endcapture %}
+                  {% if total_authors > 15 %}
+                    <details class="authors">
+                      <summary>
+                        {{ authors_display | strip }}, et al.
+                        <span class="toggle-show">(show full author list)</span>
+                        <span class="toggle-hide">(hide)</span>
+                      </summary>
+                      <div class="authors-full">{{ p.authors | join: ', ' }}</div>
+                    </details>
+                  {% else %}
+                    {{ authors_display | strip }}
+                  {% endif %}
+                  —
+                {% endif %}
                 {% if p.venue %}<em>{{ p.venue }}</em>{% endif %}
                 {% if p.year %}, {{ p.year }}{% endif %}
               </div>
