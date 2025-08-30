@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hello, blog!"
+title: "Hello, world!"
 ---
 
 coming soon!!!
