@@ -44,7 +44,7 @@ permalink: /projects/
           <p>
             There are some relatively small gas clouds known as "G-objects" orbiting close to the Milky Way's central black hole. In this project, I focus on one of these objects, namely G2, and show that this object possibly contains a compact core.
           </p>
-          <p class="meta">Supervised by Prof. Dr. Filippo Fraternali and Dr. Asger Grønnow.</p>
+          <p class="meta">Supervised by Prof. Dr. Filippo Fraternali and Dr. Asger Grønnow (University of Groningen).</p>
         </div>
       </div>
     </div>
