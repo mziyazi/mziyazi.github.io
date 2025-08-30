@@ -55,7 +55,21 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
 .lb{position:fixed;inset:0;z-index:1000}
 .lb__backdrop{position:absolute;inset:0;background:rgba(2,6,23,.7);backdrop-filter:blur(2px)}
 .lb__dialog{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;height:100%;padding:24px}
-.lb__content{width:min(1200px,92vw);max-height:86vh;display:flex;align-items:center;justify-content:center}
-.lb__content img,.lb__content iframe{width:100%;height:100%;max-height:86vh;border:0;border-radius:12px;box-shadow:var(--shadow);background:#000}
+.lb__content{max-width:min(1200px,92vw);max-height:86vh;display:flex;align-items:center;justify-content:center}
+/* Natural sizing for content inside lightbox */
+.lb__content img{display:block;max-width:min(1200px,92vw);max-height:86vh;width:auto;height:auto;border:0;border-radius:12px;box-shadow:var(--shadow);background:#000}
+.lb__content iframe{display:block;border:0;border-radius:12px;box-shadow:var(--shadow);background:#000;max-width:min(1200px,92vw);max-height:86vh}
+/* Videos (YouTube) keep 16:9 ratio */
+.lb__content iframe[src*="youtube.com"],
+.lb__content iframe[src*="youtu.be"]{width:min(1200px,92vw);height:auto;aspect-ratio:16/9}
+/* Vimeo embeds */
+.lb__content iframe[src*="vimeo.com"]{width:min(1200px,92vw);height:auto;aspect-ratio:16/9}
+/* Google Drive previews (e.g., posters/PDFs) use tall viewport height */
+.lb__content iframe[src*="drive.google.com"]{width:min(1200px,92vw);height:86vh}
+/* Fallback for other iframes: prefer width, cap by viewport height */
+.lb__content iframe:not([src*="youtube.com"]):not([src*="youtu.be"]):not([src*="vimeo.com"]):not([src*="drive.google.com"]) {
+  width:min(1200px,92vw);
+  height:auto;
+}
 .lb__close{position:absolute;top:12px;right:12px;border:0;border-radius:8px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);padding:6px 10px;font-size:22px;line-height:1;cursor:pointer}
 .lb__close:hover{filter:brightness(.95)}
