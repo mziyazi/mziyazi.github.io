@@ -54,7 +54,9 @@ details.authors .authors-full{display:block;margin-top:6px;color:var(--ink)}
 .links svg{width:18px;height:18px;flex:none;color:var(--brand)}
 .embed{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow);background:#000}
 .embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.video-grid{display:grid;gap:12px}
+.video-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:960px){.video-grid{grid-template-columns:1fr}}
+.video h3{margin:8px 0 6px}
 /* Thumbnails */
 .thumb-grid{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
 @media(max-width:960px){.thumb-grid{grid-template-columns:repeat(2,1fr)}}
