@@ -17,21 +17,35 @@ permalink: /projects/
     <h2>Videos</h2>
     <div class="card">
       <p class="meta">Simulations from MSc/BSc projects</p>
-      <div class="thumb-grid">
+      <div class="list">
         <!-- Video 1 -->
-        <a class="thumb" data-lightbox data-lb-type="iframe"
-           href="https://www.youtube.com/embed/1bSSq_N9Ap8?autoplay=1"
-           title="Play Simulation video 1">
-          <img src="https://img.youtube.com/vi/1bSSq_N9Ap8/hqdefault.jpg" alt="Video 1 thumbnail" loading="lazy"/>
-          <span class="play">Play</span>
-        </a>
+        <div class="video">
+          <a class="thumb" data-lightbox data-lb-type="iframe"
+             href="https://www.youtube.com/embed/1bSSq_N9Ap8?autoplay=1"
+             title="Master Project: Loopy Face of the Sgr A*">
+            <img src="https://img.youtube.com/vi/1bSSq_N9Ap8/hqdefault.jpg" alt="Master project video thumbnail" loading="lazy"/>
+            <span class="play">Play</span>
+          </a>
+          <h3>Master Project: Loopy Face of the Sgr A*</h3>
+          <p>
+            The supermassive black hole at the center of the Milky Way, Sgr A*, displays coherent periodic pattern in the linear polarisation plane. In this project, I show that that the magnetically arrested disk (MAD) model of the black hole can produce similiar loops in low inclinations.
+          </p>
+          <p class="meta">Supervised by Dr. Oliver Porth (University of Amsterdam) and Dr. Jordy Davelaar (University of Princeton).</p>
+        </div>
         <!-- Video 2 -->
-        <a class="thumb" data-lightbox data-lb-type="iframe"
-           href="https://www.youtube.com/embed/iFrTE4MfogM?autoplay=1"
-           title="Play Simulation video 2">
-          <img src="https://img.youtube.com/vi/iFrTE4MfogM/hqdefault.jpg" alt="Video 2 thumbnail" loading="lazy"/>
-          <span class="play">Play</span>
-        </a>
+        <div class="video">
+          <a class="thumb" data-lightbox data-lb-type="iframe"
+             href="https://www.youtube.com/embed/iFrTE4MfogM?autoplay=1"
+             title="Bachelor's Project: Mysterous Cloud Orbiting the Sgr A*">
+            <img src="https://img.youtube.com/vi/iFrTE4MfogM/hqdefault.jpg" alt="Bachelor project video thumbnail" loading="lazy"/>
+            <span class="play">Play</span>
+          </a>
+          <h3>Bachelor's Project: Mysterous Cloud Orbiting the Sgr A*</h3>
+          <p>
+            The are some relatively small gas clouds knowns as "G-objects" orbiting close to the Milky Way's central black hole. In this project, I focus on one of these objects, namely, 'G2' and show that this object possibly contains a compact core.
+          </p>
+          <p class="meta">Supervised by Prof. Dr. Filippo Fraternali and Dr. Asger Grønnow.</p>
+        </div>
       </div>
     </div>
   </section>
