@@ -55,21 +55,35 @@ permalink: /projects/
     <div class="card">
       <p class="meta">NAC 2024 + earlier work</p>
       <div class="thumb-grid">
-        {% assign poster_files = site.static_files %}
-        {% for f in poster_files %}
-          {% if f.path contains '/posters/' %}
-            {% assign base = f.name | split: '.' | first %}
-            {% assign ext = f.extname | downcase %}
-            {% if ext == '.png' or ext == '.jpg' or ext == '.jpeg' or ext == '.gif' %}
-              {% assign title = base | replace: '-', ' ' | replace: '_', ' ' | strip | capitalize %}
-              <a class="thumb" data-lightbox data-lb-type="image"
-                 href="{{ f.path | relative_url }}"
-                 title="{{ title }}">
-                <img src="{{ f.path | relative_url }}" alt="{{ title }}" loading="lazy"/>
-              </a>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+        <!-- 1. CESPM 2025 - China -->
+        <div class="poster pub">
+          <a class="thumb" data-lightbox data-lb-type="image"
+             href="/posters/Loopy_NAX.png"
+             title="CESPM 2025 - China">
+            <img src="/posters/Loopy_NAX.png" alt="CESPM 2025 - China poster" loading="lazy"/>
+          </a>
+          <h3>CESPM 2025 - China</h3>
+        </div>
+
+        <!-- 2. NAC 2024 - The Netherlands -->
+        <div class="poster pub">
+          <a class="thumb" data-lightbox data-lb-type="image"
+             href="/posters/COCONUT-MF.png"
+             title="NAC 2024 - The Netherlands">
+            <img src="/posters/COCONUT-MF.png" alt="NAC 2024 - The Netherlands poster" loading="lazy"/>
+          </a>
+          <h3>NAC 2024 - The Netherlands</h3>
+        </div>
+
+        <!-- 3. Obsrvarional Astronomy BSc -->
+        <div class="poster pub">
+          <a class="thumb" data-lightbox data-lb-type="image"
+             href="/posters/M108_galaxy_Bsc.png"
+             title="Obsrvarional Astronomy BSc">
+            <img src="/posters/M108_galaxy_Bsc.png" alt="Obsrvarional Astronomy BSc poster" loading="lazy"/>
+          </a>
+          <h3>Obsrvarional Astronomy BSc</h3>
+        </div>
       </div>
     </div>
   </section>
