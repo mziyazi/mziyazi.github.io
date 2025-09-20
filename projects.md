@@ -75,14 +75,14 @@ permalink: /projects/
           <h3>NAC 2024 - The Netherlands</h3>
         </div>
 
-        <!-- 3. Obsrvarional Astronomy BSc -->
+        <!-- 3. Observational Astronomy BSc -->
         <div class="poster pub">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/M108_galaxy_Bsc.png"
-             title="Obsrvarional Astronomy BSc">
-            <img src="/posters/M108_galaxy_Bsc.png" alt="Obsrvarional Astronomy BSc poster" loading="lazy"/>
+             title="Observational Astronomy BSc">
+            <img src="/posters/M108_galaxy_Bsc.png" alt="Observational Astronomy BSc poster" loading="lazy"/>
           </a>
-          <h3>Obsrvarional Astronomy BSc</h3>
+          <h3>Observational Astronomy BSc</h3>
         </div>
       </div>
     </div>
