@@ -55,12 +55,24 @@ permalink: /projects/
     <div class="card">
       <p class="meta">NAC 2024 + earlier work</p>
       <div class="thumb-grid">
-        <!-- COCONUT-MF Poster -->
-        <a class="thumb" data-lightbox data-lb-type="image"
-           href="/posters/COCONUT-MF.png"
-           title="COCONUT-MF: Matrix-Free Methods for General Relativistic Magneto-Hydrodynamics">
-          <img src="/posters/COCONUT-MF.png" alt="COCONUT-MF poster thumbnail" loading="lazy"/>
-        </a>
+        {% assign poster_files = site.static_files | where_exp: 'f', "f.path contains '/posters/'" | sort: 'name' %}
+        {% for f in poster_files %}
+          {% assign base = f.name | split: '.' | first %}
+          {% assign title = base | replace: '-', ' ' | replace: '_', ' ' | strip | capitalize %}
+          {% if f.extname == '.png' or f.extname == '.jpg' or f.extname == '.jpeg' or f.extname == '.gif' %}
+            <a class="thumb" data-lightbox data-lb-type="image"
+               href="{{ f.path | relative_url }}"
+               title="{{ title }}">
+              <img src="{{ f.path | relative_url }}" alt="{{ title }}" loading="lazy"/>
+            </a>
+          {% elsif f.extname == '.pdf' %}
+            <a class="thumb" data-lightbox data-lb-type="iframe"
+               href="{{ f.path | relative_url }}"
+               title="{{ title }} (PDF)">
+              <img src="{{ '/assets/img/pdf-placeholder.svg' | relative_url }}" alt="{{ title }} PDF thumbnail" loading="lazy"/>
+            </a>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </section>
