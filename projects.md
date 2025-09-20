@@ -55,17 +55,11 @@ permalink: /projects/
     <div class="card">
       <p class="meta">NAC 2024 + earlier work</p>
       <div class="thumb-grid">
-        <!-- Poster 1 -->
-        <a class="thumb" data-lightbox data-lb-type="iframe"
-           href="https://drive.google.com/file/d/1BwiqrcjqTrJ5ewc8dWBtBjKDqhJfS5ii/preview"
-           title="Open Poster 1">
-          <img src="https://drive.google.com/thumbnail?id=1BwiqrcjqTrJ5ewc8dWBtBjKDqhJfS5ii&sz=w800" alt="Poster 1 thumbnail" loading="lazy"/>
-        </a>
-        <!-- Poster 2 -->
-        <a class="thumb" data-lightbox data-lb-type="iframe"
-           href="https://drive.google.com/file/d/1jkV1qofiSeLiLbfs7dPabLwcKSvFRLyT/preview"
-           title="Open Poster 2">
-          <img src="https://drive.google.com/thumbnail?id=1jkV1qofiSeLiLbfs7dPabLwcKSvFRLyT&sz=w800" alt="Poster 2 thumbnail" loading="lazy"/>
+        <!-- COCONUT-MF Poster -->
+        <a class="thumb" data-lightbox data-lb-type="image"
+           href="/posters/COCONUT-MF.png"
+           title="COCONUT-MF: Matrix-Free Methods for General Relativistic Magneto-Hydrodynamics">
+          <img src="/posters/COCONUT-MF.png" alt="COCONUT-MF poster thumbnail" loading="lazy"/>
         </a>
       </div>
     </div>
