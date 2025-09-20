@@ -53,7 +53,6 @@ permalink: /projects/
   <section id="posters">
     <h2>Posters</h2>
     <div class="card">
-      <p class="meta">NAC 2024 + earlier work</p>
       <div class="thumb-grid">
         <!-- 1. CESPM 2025 - China -->
         <div class="poster pub">
