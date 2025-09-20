@@ -55,16 +55,19 @@ permalink: /projects/
     <div class="card">
       <p class="meta">NAC 2024 + earlier work</p>
       <div class="thumb-grid">
-        {% assign poster_files = site.static_files | where_exp: 'f', "f.path contains '/posters/'" | sort: 'name' %}
+        {% assign poster_files = site.static_files %}
         {% for f in poster_files %}
-          {% assign base = f.name | split: '.' | first %}
-          {% assign title = base | replace: '-', ' ' | replace: '_', ' ' | strip | capitalize %}
-          {% if f.extname == '.png' or f.extname == '.jpg' or f.extname == '.jpeg' or f.extname == '.gif' %}
-            <a class="thumb" data-lightbox data-lb-type="image"
-               href="{{ f.path | relative_url }}"
-               title="{{ title }}">
-              <img src="{{ f.path | relative_url }}" alt="{{ title }}" loading="lazy"/>
-            </a>
+          {% if f.path contains '/posters/' %}
+            {% assign base = f.name | split: '.' | first %}
+            {% assign ext = f.extname | downcase %}
+            {% if ext == '.png' or ext == '.jpg' or ext == '.jpeg' or ext == '.gif' %}
+              {% assign title = base | replace: '-', ' ' | replace: '_', ' ' | strip | capitalize %}
+              <a class="thumb" data-lightbox data-lb-type="image"
+                 href="{{ f.path | relative_url }}"
+                 title="{{ title }}">
+                <img src="{{ f.path | relative_url }}" alt="{{ title }}" loading="lazy"/>
+              </a>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </div>
