@@ -66,7 +66,7 @@ permalink: /projects/
               <img src="{{ f.path | relative_url }}" alt="{{ title }}" loading="lazy"/>
             </a>
           {% elsif f.extname == '.pdf' %}
-            <a class="thumb" data-lightbox data-lb-type="iframe"
+            <a class="thumb" data-lightbox data-lb-type="pdf"
                href="{{ f.path | relative_url }}"
                title="{{ title }} (PDF)">
               <img src="{{ '/assets/img/pdf-placeholder.svg' | relative_url }}" alt="{{ title }} PDF thumbnail" loading="lazy"/>

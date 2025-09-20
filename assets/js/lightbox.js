@@ -5,9 +5,13 @@
   const content = lb.querySelector('.lb__content');
 
   function openLightbox(node){
-    const type = node.getAttribute('data-lb-type') || 'iframe';
+    const typeAttr = node.getAttribute('data-lb-type');
     const src = node.getAttribute('data-lb-src') || node.getAttribute('href');
     if(!src) return;
+
+    // Infer type if not explicitly set
+    let type = typeAttr || 'iframe';
+    if(!typeAttr && /\.pdf($|[?#])/i.test(src)) type = 'pdf';
 
     // Clear previous
     content.innerHTML = '';
@@ -17,6 +21,12 @@
       img.src = src;
       img.alt = node.getAttribute('data-lb-alt') || '';
       content.appendChild(img);
+    } else if(type === 'pdf'){
+      const embed = document.createElement('embed');
+      embed.src = src;
+      embed.type = 'application/pdf';
+      embed.className = 'pdf-embed';
+      content.appendChild(embed);
     } else {
       const iframe = document.createElement('iframe');
       iframe.src = src;
@@ -55,4 +65,3 @@
     if(e.key === 'Escape' && !lb.classList.contains('hidden')) closeLightbox();
   });
 })();
-
