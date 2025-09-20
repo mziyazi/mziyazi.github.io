@@ -57,9 +57,9 @@ permalink: /projects/
         <!-- 1. CESPM 2025 - China -->
         <div class="poster pub">
           <a class="thumb" data-lightbox data-lb-type="image"
-             href="/posters/Loopy_NAX.png"
+             href="/posters/COCONUT-MF.png"
              title="CESPM 2025 - China">
-            <img src="/posters/Loopy_NAX.png" alt="CESPM 2025 - China poster" loading="lazy"/>
+            <img src="/posters/COCONUT-MF.png" alt="CESPM 2025 - China poster" loading="lazy"/>
           </a>
           <h3>CESPM 2025 - China</h3>
         </div>
@@ -67,9 +67,9 @@ permalink: /projects/
         <!-- 2. NAC 2024 - The Netherlands -->
         <div class="poster pub">
           <a class="thumb" data-lightbox data-lb-type="image"
-             href="/posters/COCONUT-MF.png"
+             href="/posters/Loopy_NAX.png"
              title="NAC 2024 - The Netherlands">
-            <img src="/posters/COCONUT-MF.png" alt="NAC 2024 - The Netherlands poster" loading="lazy"/>
+            <img src="/posters/Loopy_NAX.png" alt="NAC 2024 - The Netherlands poster" loading="lazy"/>
           </a>
           <h3>NAC 2024 - The Netherlands</h3>
         </div>
