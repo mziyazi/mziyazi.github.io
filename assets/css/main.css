@@ -86,6 +86,10 @@ details.authors .authors-full{display:block;margin-top:6px;color:var(--ink)}
 .lb__content iframe[src*="vimeo.com"]{width:min(1200px,92vw);height:auto;aspect-ratio:16/9}
 /* Google Drive previews (e.g., posters/PDFs) use tall viewport height */
 .lb__content iframe[src*="drive.google.com"]{width:min(1200px,92vw);height:86vh}
+/* Local PDF files: give them a tall viewport height like Drive */
+.lb__content iframe[src$=".pdf"],
+.lb__content iframe[src*=".pdf?"],
+.lb__content iframe[src*=".pdf#"]{width:min(1200px,92vw);height:86vh}
 /* Fallback for other iframes: prefer width, cap by viewport height */
 .lb__content iframe:not([src*="youtube.com"]):not([src*="youtu.be"]):not([src*="vimeo.com"]):not([src*="drive.google.com"]) {
   width:min(1200px,92vw);
