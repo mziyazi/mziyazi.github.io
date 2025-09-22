@@ -9,6 +9,7 @@ title: Home
       <div class="avatar-wrap">
         <img src="UC.jpeg" alt="Portrait of Mahdi Najafi-Ziyazi" class="avatar" />
         <div class="logo-row" aria-hidden="true">
+          <img src="/logos/KUL.png" alt="" class="logo" loading="lazy"/>
           <img src="/logos/ERC.jpeg" alt="" class="logo" loading="lazy"/>
           <img src="/logos/EU.jpeg" alt="" class="logo" loading="lazy"/>
           <img src="/logos/OpenSesame.jpeg" alt="" class="logo" loading="lazy"/>

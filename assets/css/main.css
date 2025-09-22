@@ -1,13 +1,15 @@
-:root{--bg:#f7faff;--card:#fff;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;
---brand:#2563eb;--brand-weak:#93c5fd;--shadow:0 8px 24px rgba(2,6,23,.06);
+:root{--bg:#eef3f8;--card:#ffffff;--ink:#121c2d;--muted:#5e6d86;--line:#d3dbe7;
+--brand:#4e88d9;--brand-weak:#9bb6e6;--shadow:0 8px 24px rgba(18,28,45,.07);
 --radius:16px;--maxw:1024px}
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
 color:var(--ink);background:var(--bg);line-height:1.6;letter-spacing:.1px}
 a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(8px);
-background:rgba(247,250,255,.7);border-bottom:1px solid var(--line)}
+.site-hero{position:relative;display:block;margin:0;color:#fff;overflow:hidden;height:clamp(220px,45vw,320px)}
+.site-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.site-hero__caption{position:absolute;right:16px;top:16px;margin:0;font-size:10px;letter-spacing:.02em;background:rgba(15,23,42,.48);color:rgba(226,232,240,.88);padding:5px 10px;border-radius:999px;backdrop-filter:blur(3px);box-shadow:0 4px 16px rgba(2,6,23,.14);white-space:nowrap}
+.site-nav{position:sticky;top:0;z-index:60;backdrop-filter:saturate(180%) blur(12px);background:rgba(239,244,250,.9);border-bottom:1px solid rgba(205,214,228,.85);box-shadow:0 1px 0 rgba(148,163,184,.12),0 8px 24px rgba(13,22,35,.08);transition:background-color .3s ease,box-shadow .3s ease}
 .nav{display:flex;align-items:center;justify-content:space-between;height:56px}
 .brand{display:inline-flex;align-items:center;gap:12px;font-weight:700;color:inherit}
 .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--brand)}
@@ -30,18 +32,23 @@ nav a{font-weight:500}
 /* (old .logos-behind cluster removed) */
 section{padding:28px 0 8px;scroll-margin-top:72px}
 h2{font-size:clamp(22px,3vw,28px);margin:12px 0 16px}
+.intro{margin:8px 0 0;color:var(--muted);max-width:720px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+.card--frost{background:linear-gradient(180deg,rgba(233,239,247,.85),rgba(233,239,247,.6));border-color:rgba(198,211,229,.7);backdrop-filter:blur(6px)}
+.card--grid{background:rgba(255,255,255,.92);border-color:rgba(211,219,231,.8)}
 .grid{display:grid;gap:16px}
 .grid.cols-3{grid-template-columns:repeat(3,1fr)}
 @media(max-width:960px){.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:960px){.site-hero{height:clamp(200px,52vw,280px)}.site-hero__caption{right:12px;top:12px;font-size:9px;padding:4px 9px}}
 @media(max-width:640px){.grid.cols-3{grid-template-columns:1fr}.hero{grid-template-columns:auto 1fr}.avatar{width:100px;height:100px}}
+@media(max-width:640px){.site-hero{height:clamp(180px,58vw,240px)}.site-hero__caption{right:10px;top:10px;font-size:9px;padding:4px 8px}}
 footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
 .meta{color:var(--muted);font-size:14px}
 .muted{color:var(--muted)}
-.btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600;box-shadow:var(--shadow)}
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600;box-shadow:0 10px 26px rgba(78,136,217,.28)}
 .btn:hover{filter:brightness(0.95);text-decoration:none}
 .badges{display:flex;gap:10px;flex-wrap:wrap}
-.badge{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--brand-weak);color:#0b3b86;background:#eaf3ff;font-size:12px}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid rgba(155,182,230,.7);color:#1c3153;background:rgba(155,182,230,.18);font-size:12px}
 .list{display:grid;gap:12px}
 .pub{display:grid;gap:4px}
 .pub h3{margin:0;font-size:18px}
@@ -68,10 +75,10 @@ details.authors .authors-full{display:block;margin-top:6px;color:var(--ink)}
 .embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video-grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
 @media(max-width:960px){.video-grid{grid-template-columns:1fr}}
-.video{background:linear-gradient(0deg,rgba(37,99,235,.03),rgba(37,99,235,.03)),var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
-.video:nth-child(even){background:linear-gradient(0deg,rgba(2,6,23,.02),rgba(2,6,23,.02)),var(--card)}
+.video{background:linear-gradient(145deg,rgba(78,136,217,.12),rgba(233,239,247,.4)),var(--card);border:1px solid rgba(155,182,230,.4);border-radius:14px;padding:16px;box-shadow:0 12px 28px rgba(18,28,45,.06)}
+.video:nth-child(even){background:linear-gradient(145deg,rgba(29,49,79,.08),rgba(233,239,247,.35)),var(--card)}
 .video .thumb{border:0;box-shadow:none}
-.video h3{margin:8px 0 6px}
+.video h3{margin:10px 0 6px}
 /* Thumbnails */
 .thumb-grid{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
 @media(max-width:960px){.thumb-grid{grid-template-columns:repeat(2,1fr)}}
@@ -81,6 +88,13 @@ details.authors .authors-full{display:block;margin-top:6px;color:var(--ink)}
 .thumb:hover img{transform:scale(1.02)}
 .thumb .play{position:absolute;inset:auto auto 10px 10px;background:rgba(0,0,0,.6);color:#fff;border-radius:20px;padding:6px 10px;font-weight:700;line-height:1;display:inline-flex;align-items:center;gap:6px}
 .thumb .play::before{content:"▶";font-size:12px}
+
+.poster-card{display:flex;flex-direction:column;gap:12px;background:rgba(78,136,217,.06);border:1px solid rgba(155,182,230,.35);border-radius:18px;padding:16px;box-shadow:0 10px 24px rgba(18,28,45,.05);transition:transform .2s ease,box-shadow .2s ease}
+.poster-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(18,28,45,.08)}
+.poster-card h3{margin:0;font-size:16px;font-weight:600;color:var(--ink)}
+.poster-card .thumb{border-radius:14px;border:1px solid rgba(155,182,230,.35);box-shadow:none;background:rgba(12,20,36,.85)}
+.poster-card .thumb img{transition:transform .2s ease,filter .2s ease}
+.poster-card .thumb:hover img{transform:scale(1.03);filter:brightness(1.05)}
 
 /* Lightbox */
 .lb.hidden{display:none}

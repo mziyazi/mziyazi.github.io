@@ -7,15 +7,12 @@ permalink: /projects/
 <main id="main" class="wrap">
   <section id="projects">
     <h1>Projects</h1>
-    <div class="badges" style="margin:12px 0 8px">
-      <a class="btn" href="#videos">Videos</a>
-      <a class="btn" href="#posters">Posters</a>
-    </div>
+    <p class="intro">Highlights from ongoing research, visual abstracts, and science communication projects.</p>
   </section>
 
   <section id="videos">
     <h2>Videos</h2>
-    <div class="card">
+    <div class="card card--frost">
       <p class="meta">Simulations from MSc/BSc projects</p>
       <div class="video-grid">
         <!-- Video 1 -->
@@ -52,10 +49,10 @@ permalink: /projects/
 
   <section id="posters">
     <h2>Posters</h2>
-    <div class="card">
+    <div class="card card--grid">
       <div class="thumb-grid">
         <!-- 1. CESPM 2025 - China -->
-        <div class="poster pub">
+        <div class="poster-card">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/COCONUT-MF.png"
              title="CESPM 2025 - China">
@@ -65,7 +62,7 @@ permalink: /projects/
         </div>
 
         <!-- 2. NAC 2024 - The Netherlands -->
-        <div class="poster pub">
+        <div class="poster-card">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/Loopy_NAX.png"
              title="NAC 2024 - The Netherlands">
@@ -75,7 +72,7 @@ permalink: /projects/
         </div>
 
         <!-- 3. Observational Astronomy BSc -->
-        <div class="poster pub">
+        <div class="poster-card">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/M108_galaxy_Bsc.png"
              title="Observational Astronomy BSc">
