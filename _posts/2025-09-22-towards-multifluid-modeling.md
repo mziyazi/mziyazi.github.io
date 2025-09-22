@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "PhD Project: Towards Multifluid Modeling of the Solar Atmosphere"
+date: 2025-09-22
 ---
 
 The Sun provides a unique opportunity to study stellar structure and dynamics at close range. Its proximity of about 150 million kilometers to Earth also makes our planet highly vulnerable to powerful solar storms. These eruptions can disrupt ground based power grids and interfere with communication and GPS satellites in orbit.
