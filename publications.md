@@ -4,7 +4,7 @@ title: Publications
 permalink: /publications/
 ---
 
-<main class="wrap">
+<main id="main" class="wrap">
   <section id="publications">
     <h1>Publications</h1>
     {% assign pubs = site.data.publications %}

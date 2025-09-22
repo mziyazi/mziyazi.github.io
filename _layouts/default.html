@@ -5,21 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | escape }} — {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="{{ '/mnz-white.ico' | relative_url }}" sizes="any">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ page.title | escape }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  {% if page.og_image or site.og_image %}
+  <meta property="og:image" content="{{ page.og_image | default: site.og_image | absolute_url }}" />
+  {% else %}
+  <meta property="og:image" content="{{ '/UC.jpeg' | absolute_url }}" />
+  {% endif %}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.title | escape }}" />
+  <meta name="twitter:description" content="{{ site.description }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <header>
     <div class="wrap nav">
-      <div class="brand"><span class="dot"></span> <span>{{ site.title }}</span></div>
+      <a class="brand" href="{{ '/' | relative_url }}"><span class="dot"></span> <span>{{ site.title }}</span></a>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="{{ '/' | relative_url }}#about">About</a></li>
-          <li><a href="{{ '/projects/' | relative_url }}" target="_blank" rel="noopener">Projects</a></li>
-          <li><a href="{{ '/publications/' | relative_url }}" target="_blank" rel="noopener">Publications</a></li>
-          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/' | relative_url }}#about" {% if page.url == '/' %}aria-current="page"{% endif %}>About</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %} target="_blank" rel="noopener">Projects</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}aria-current="page"{% endif %} target="_blank" rel="noopener">Publications</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>Blog</a></li>
           <li><a href="mailto:mahdi@mziyazi.com">Email</a></li>
         </ul>
       </nav>

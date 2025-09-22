@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-<main class="wrap">
+<main id="main" class="wrap">
   <section id="projects">
     <h1>Projects</h1>
     <div class="badges" style="margin:12px 0 8px">
