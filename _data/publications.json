@@ -1,5 +1,30 @@
 [
   {
+    "title": "Time-evolving coronal modelling of the solar maximum around the solar storms in May 2024 by COCONUT",
+    "authors": [
+      "Wang, H. P.",
+      "Poedts, S.",
+      "Lani, A.",
+      "Linan, L.",
+      "Baratashvili, T.",
+      "Zhang, F.",
+      "Sorokina, D.",
+      "Jeong, H. -J.",
+      "Li, Y. C.",
+      "Najafi-Ziyazi, M.",
+      "Schmieder, B."
+    ],
+    "abstract": "Context. Time-evolving magnetohydrodynamic (MHD) coronal models driven by a sequence of time-evolving photospheric magnetograms deliver more realistic results than traditional quasi-steady-state models constrained by a static magnetogram. The fully implicit time-evolving coronal model COCONUT performs efficiently enough for real-time coronal simulations during solar minimum. Significant challenges persist in modelling the more complex coronal evolutions of solar maximum scenarios, however. Aims. During solar maxima, the coronal magnetic field is more complex and stronger, and coronal structures evolve more rapidly than during solar minima. Consequently, time-evolving MHD coronal modelling of solar maxima often struggles with poor numerical stability and low computational efficiency. We enhanced the numerical stability of the time-evolving coronal model COCONUT to mitigate these issues with the aim to evaluate the differences between the time-evolving and quasi-steady-state coronal simulation results, and to assess the impact of the spatial resolution on global MHD coronal modelling of solar maxima. Methods. After enhancing the positivity-preserving property of the time-evolving coronal model COCONUT, we employed it to simulate the evolution of coronal structures from the solar surface to 0.1 AU in an inertial coordinate system over two Carrington rotations around the solar storms in May 2024. These simulations were performed on unstructured geodesic meshes containing 6.06, 1.52, and 0.38 million (M) cells to assess the impact of grid resolution. We also conducted a quasi-steady-state coronal simulation that treated the solar surface as a rigidly rotating spherical shell to demonstrate the impact of the emergence and cancellation of the magnetic flux in global coronal simulations. A comparison with observations further validated the reliability of the efficient time-evolving coronal modelling technique. Results. We demonstrate that incorporating the evolution of the magnetic field in the inner boundary conditions can significantly improve the fidelity of global MHD coronal simulations around a solar maximum. A simulated magnetic field strength using a refined mesh with 6.06 M cells can be stronger by more than 40% than that in a coarser mesh with 0.38 M cells. A time step of 5 minutes and a mesh containing 1.5 M cells can effectively capture the evolution of large-scale coronal structures and small-sized dipoles. Thus, the fully implicit time-evolving model COCONUT shows promise for accurately conducting real-time global coronal simulations of solar maxima. This makes it suitable for practical applications such as daily space-weather forecasting.",
+    "venue": "Astronomy and Astrophysics",
+    "year": "2025",
+    "pubdate": null,
+    "bibcode": "2025A&A...702A..37W",
+    "doi": [
+      "10.1051/0004-6361/202555760"
+    ],
+    "url": "https://ui.adsabs.harvard.edu/abs/2025A&A...702A..37W/abstract"
+  },
+  {
     "title": "COCONUT: A time-evolving coronal model with an energy decomposition strategy",
     "authors": [
       "Wang, Haopeng",
