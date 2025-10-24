@@ -2,6 +2,11 @@ title: "Mahdi Najafi-Ziyazi"
 description: "PhD researcher in computational astrophysics (CmPA, KU Leuven)"
 url: ""            # set to https://mziyazi.com after DNS is working
 baseurl: ""        # keep empty for a root site
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  math_engine_opts:
+    preview: false
 markdown: kramdown
 theme: null
 plugins: []        # keep empty (GitHub Pages builds fine without extras)

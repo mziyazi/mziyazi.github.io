@@ -60,6 +60,16 @@
     <div class="wrap">© <span id="y"></span> {{ site.title }} · Leuven, Belgium · <a href="https://github.com/mziyazi" target="_blank" rel="noopener">GitHub</a></div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
   <!-- Lightbox markup -->
   <div id="lightbox" class="lb hidden" aria-hidden="true">
     <div class="lb__backdrop" data-lb-close></div>

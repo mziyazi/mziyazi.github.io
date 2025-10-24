@@ -31,6 +31,23 @@ title: Home
 
   
 
+  <section id="solar-video">
+    <div class="media-card card card--sunrise card--compact">
+      <div class="media-card__media">
+        <h2 class="media-card__title">Solar Wind In Motion</h2>
+        <video class="media-card__video" src="{{ '/assets/vid/WISPRWithSun_H264.mp4' | relative_url }}" autoplay loop muted playsinline>
+          <source src="{{ '/assets/vid/WISPRWithSun_H264.mp4' | relative_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="media-card__credit">Video: Parker Solar Probe / WISPR (NASA)</p>
+      </div>
+      <div class="media-card__text">
+        <p>Captured during Parker Solar Probe’s record-breaking perihelion on 25 December 2024, this sequence from the Wide-field Imager for Solar Probe (WISPR) shows the spacecraft traveling through the inner heliosphere less than five solar radii from the surface.</p>
+        <p>The video shows bright coronal streamers, swirls of dust-scattered sunlight, and the fine structures of the solar wind flowing outward at high speed. These outflowing material and the solar magnetic currents can lead to aurora events on Earth and induce electric current that can disrupt the power grids and the communications. Therefore, our project can paly an important role to accurately simulate these phenomena well in advance to protect our infrustucure here on Earth.</p>
+      </div>
+    </div>
+  </section>
+
   
 
 </main>

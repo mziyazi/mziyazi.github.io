@@ -49,12 +49,31 @@
 
   // Delegated click handler
   document.addEventListener('click', (e)=>{
+    if(e.defaultPrevented) return;
+    if(e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+
     const trigger = e.target.closest('[data-lightbox]');
     if(trigger){
       e.preventDefault();
       openLightbox(trigger);
       return;
     }
+
+    const imageLink = e.target.closest('a');
+    if(imageLink){
+      const nestedImage = imageLink.querySelector('img');
+      const href = imageLink.getAttribute('href');
+      if(nestedImage && href && /\.(jpe?g|png|gif|webp|avif|svg)([?#].*)?$/i.test(href)){
+        e.preventDefault();
+        imageLink.dataset.lightbox = '';
+        imageLink.dataset.lbType = 'image';
+        imageLink.dataset.lbSrc = href;
+        if(!imageLink.dataset.lbAlt && nestedImage.alt) imageLink.dataset.lbAlt = nestedImage.alt;
+        openLightbox(imageLink);
+        return;
+      }
+    }
+
     if(e.target.closest('[data-lb-close]')){
       closeLightbox();
     }
