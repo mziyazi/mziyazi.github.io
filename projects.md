@@ -51,7 +51,17 @@ permalink: /projects/
     <h2>Posters</h2>
     <div class="card card--grid">
       <div class="thumb-grid">
-        <!-- 1. CESPM 2025 - China -->
+        <!-- 1. ESWW 2025 - Sweden -->
+        <div class="poster-card">
+          <a class="thumb" data-lightbox data-lb-type="image"
+             href="/posters/ESWW25.png"
+             title="ESWW 2025 - Sweden">
+            <img src="/posters/ESWW25.png" alt="ESWW 2025 - Sweden poster" loading="lazy"/>
+          </a>
+          <h3>ESWW 2025 - Sweden</h3>
+        </div>
+
+        <!-- 2. CESPM 2025 - China -->
         <div class="poster-card">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/COCONUT-MF.png"
@@ -61,7 +71,7 @@ permalink: /projects/
           <h3>CESPM 2025 - China</h3>
         </div>
 
-        <!-- 2. NAC 2024 - The Netherlands -->
+        <!-- 3. NAC 2024 - The Netherlands -->
         <div class="poster-card">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/Loopy_NAX.png"
@@ -71,7 +81,7 @@ permalink: /projects/
           <h3>NAC 2024 - The Netherlands</h3>
         </div>
 
-        <!-- 3. Observational Astronomy BSc -->
+        <!-- 4. Observational Astronomy BSc -->
         <div class="poster-card">
           <a class="thumb" data-lightbox data-lb-type="image"
              href="/posters/M108_galaxy_Bsc.png"
